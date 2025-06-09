@@ -3,15 +3,25 @@ import './login.css';
 import logo from '../../assets/logo.png'; 
 import systemName from '../../assets/system-name.png';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState(''); 
   const [password, setPassword] = useState(''); 
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Login attempt with:', { email, password });
+
+
+
+    if (email && password) {
+      navigate('/2fa'); // Redirecionar para a página de 2FA
+    } else {
+      alert('Por favor, preencha o e-mail e a senha.');
+    }
   };
 
   const togglePasswordVisibility = () => {
