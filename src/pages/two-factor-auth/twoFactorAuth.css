@@ -24,6 +24,7 @@
   align-items: center;
   margin-bottom: 25px;
   width: 100%;
+  position: relative;
 }
 
 .back-button {
@@ -40,7 +41,10 @@
   font-weight: bold;
   color: #333;
   text-align: center;
-  flex-grow: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
 }
 
 .two-factor-auth-instruction {
