@@ -81,9 +81,6 @@
   -webkit-appearance: none;
   margin: 0;
 }
-.code-input[type=number] {
-  -moz-appearance: textfield; 
-}
 
 .continue-button {
   width: 100%;
