@@ -18,7 +18,7 @@ const LoginPage: React.FC = () => {
 
 
     if (email && password) {
-      navigate('/2fa'); // Redirecionar para a página de 2FA
+      navigate('/2fa');
     } else {
       alert('Por favor, preencha o e-mail e a senha.');
     }

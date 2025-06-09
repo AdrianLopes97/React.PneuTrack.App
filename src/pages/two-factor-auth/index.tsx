@@ -1,13 +1,15 @@
 import React, { useState, useRef } from 'react';
-import type { ChangeEvent, KeyboardEvent } from 'react'; // Use type-only imports
+import type { ChangeEvent, KeyboardEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import './twoFactorAuth.css';
+import { useAuth } from '../../contexts/AuthContext';
 
 const TwoFactorAuthPage: React.FC = () => {
   const [code, setCode] = useState<string[]>(new Array(4).fill(''));
   const navigate = useNavigate();
   const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
+  const { login } = useAuth();
 
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement>,
@@ -37,6 +39,7 @@ const TwoFactorAuthPage: React.FC = () => {
     e.preventDefault();
     const enteredCode = code.join('');
     if (enteredCode.length === 4) {
+      login(); // Set isAuthenticated to true
       navigate('/home'); 
     } else {
       alert('Por favor, insira o código de 4 dígitos.');
