@@ -37,9 +37,7 @@ const TwoFactorAuthPage: React.FC = () => {
     e.preventDefault();
     const enteredCode = code.join('');
     if (enteredCode.length === 4) {
-      alert(`Código "${enteredCode}" inserido. Funcionalidade de verificação a ser implementada.`);
-
-      navigate('/');
+      navigate('/home'); 
     } else {
       alert('Por favor, insira o código de 4 dígitos.');
     }
