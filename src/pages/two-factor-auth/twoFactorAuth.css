@@ -1,0 +1,115 @@
+.two-factor-auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.two-factor-auth-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; 
+  text-align: center;
+}
+
+.two-factor-auth-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #333;
+}
+
+.two-factor-auth-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.two-factor-auth-instruction {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.code-inputs-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  margin-bottom: 30px;
+}
+
+.code-input {
+  width: 50px; 
+  height: 60px; 
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.code-input:focus {
+  border-color: #3b5998; 
+  box-shadow: 0 0 0 2px rgba(59, 89, 152, 0.2);
+}
+
+.code-input::-webkit-outer-spin-button,
+.code-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.code-input[type=number] {
+  -moz-appearance: textfield; 
+}
+
+.continue-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b5998; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.continue-button:hover {
+  background-color: #324a7d;
+}
+
+.resend-code-link {
+  font-size: 14px;
+  color: #555;
+}
+
+.resend-code-link a {
+  color: #3b5998;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resend-code-link a:hover {
+  text-decoration: underline;
+}
