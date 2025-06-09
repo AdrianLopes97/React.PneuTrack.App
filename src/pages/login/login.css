@@ -21,14 +21,20 @@
 
 .login-logo {
   margin-bottom: 30px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #1877f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.login-logo img {
+.login-logo .logo-icon {
+  max-width: 50px;
+  height: auto;
+}
+
+.login-logo .logo-text-img {
   max-width: 150px;
-  margin-bottom: 10px;
+  height: auto;
 }
 
 .login-title {

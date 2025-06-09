@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './login.css'; 
 import logo from '../../assets/logo.png'; 
+import systemName from '../../assets/system-name.png';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const LoginPage: React.FC = () => {
   const [email, setEmail] = useState(''); 
@@ -20,7 +22,8 @@ const LoginPage: React.FC = () => {
     <div className="login-page">
       <div className="login-container">
         <div className="login-logo">
-          <img src={logo} alt="Pneu Track Logo" />
+          <img src={logo} alt="Pneu Track Logo Icon" className="logo-icon" />
+          <img src={systemName} alt="Pneu Track System Name" className="logo-text-img" />
         </div>
         <form onSubmit={handleLogin}>
           <div className="form-group">
@@ -42,7 +45,7 @@ const LoginPage: React.FC = () => {
                 id="password"
                 value={password}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
-                placeholder="••••••••"
+                placeholder={showPassword ? 'insira sua senha' : '••••••••'}
                 required
               />
               <span
@@ -52,7 +55,7 @@ const LoginPage: React.FC = () => {
                 tabIndex={0}
                 onKeyPress={(e: React.KeyboardEvent<HTMLSpanElement>) => e.key === 'Enter' && togglePasswordVisibility()}
               >
-                {showPassword ? '🙈' : '👁️'}
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
           </div>
