@@ -1,32 +1,16 @@
 import React from 'react';
 import './home.css'; // Import the CSS file
-import {
-  FaBell,
-  FaUserCircle,
-  FaChevronDown,
-} from 'react-icons/fa';
 import { Icon } from '@iconify/react'; // Import Iconify
 import LupaIcon from '../../components/icons/lupa';
 import Sidebar from '../../components/sidebar'; // Import the Sidebar component
+import Header from '../../components/header'; // Import the Header component
 
 const HomePage: React.FC = () => {
   return (
     <div className="home-page-layout">
       <Sidebar />
       <main className="home-main-content">
-        <header className="main-top-header">
-          <div className="user-controls">
-            <div className="notification-bell-container">
-              <FaBell />
-              <span className="notification-dot"></span>
-            </div>
-            <div className="user-profile">
-              <FaUserCircle />
-              <FaChevronDown />
-            </div>
-          </div>
-        </header>
-
+        <Header />
         <section className="page-content-area">
           <div className="greeting-section">
             <h1>Olá, Usuário!</h1>

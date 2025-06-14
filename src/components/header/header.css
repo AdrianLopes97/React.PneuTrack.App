@@ -1,0 +1,70 @@
+/* Header layout */
+.header-layout { /* Renamed from .main-top-header */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #e0e0e0;
+  height: 60px;
+  box-sizing: border-box;
+  width: 100%; /* Ensure header takes full width of its container (.home-main-content) */
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+}
+
+.notification-bell-container {
+  position: relative;
+  margin-right: 25px;
+  font-size: 24px; /* Adjusted from 34px for a more standard header icon size */
+  color: #505050;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  border: 1.5px solid white;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #505050;
+}
+
+.user-profile > svg:not(.dropdown-arrow) { /* Target user icon, exclude dropdown */
+  width: 28px; /* Adjusted for header context */
+  height: 28px; /* Adjusted for header context */
+  margin-right: 8px;
+}
+
+.dropdown-arrow {
+  font-size: 12px; /* Keep small as it's an indicator */
+  margin-left: 5px;
+  width: 12px !important; /* Override if necessary, ensure it's small */
+  height: 12px !important; /* Override if necessary, ensure it's small */
+}
+
+/* Icon styling within header */
+.header-layout .FaBell,
+.header-layout .FaUserCircle,
+.header-layout .FaChevronDown {
+  color: #505050; /* Specific color for header icons */
+}
+
+/* Adjusting FaBell size specifically if needed, as font-size on container might not catch it */
+.notification-bell-container .FaBell {
+    font-size: 24px; /* Ensure bell icon size */
+}

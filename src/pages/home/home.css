@@ -1,9 +1,7 @@
 /* Overall page layout */
 .home-page-layout {
   display: flex;
-  /* height: 100vh; Removed as sidebar now controls its own height and is fixed */
   background-color: #f8f9fa; /* Light grey background for the whole page */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Common Windows font */
   padding-left: 130px; /* Add padding to account for fixed sidebar width */
 }
 
@@ -12,76 +10,17 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* Allow scrolling if content overflows */
+  /* overflow-y: auto; Should be on page-content-area if header is fixed */
 }
 
-/* Top header in main content */
-.main-top-header {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 30px; /* Reduced vertical padding */
-  background-color: #F6F6F6;
-  border-bottom: 1px solid #e0e0e0; /* Light border */
-  height: 60px; /* Fixed height for header */
-  box-sizing: border-box;
-}
-
-.user-controls {
-  display: flex;
-  align-items: center;
-}
-
-.notification-bell-container { /* Renamed for clarity */
-  position: relative;
-  margin-right: 25px;
-  font-size: 34px; /* Icon size updated */
-  color: #505050;
-  cursor: pointer;
-  display: flex; /* For centering icon if needed */
-  align-items: center;
-}
-
-.notification-dot {
-  position: absolute;
-  top: 0px;    /* Adjusted position */
-  right: -2px; /* Adjusted position */
-  width: 8px;
-  height: 8px;
-  background-color: red;
-  border-radius: 50%;
-  border: 1.5px solid white; /* Slightly thicker border */
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: #505050;
-}
-
-/* .user-profile span[role="img"] { User icon */
-  /* font-size: 24px; User icon size */
-  /* margin-right: 8px; */
-/* } */
-
-/* Updated rule for user profile SVG icon */
-.user-profile > svg {
-  width: 34px;
-  height: 34px;
-  margin-right: 8px;
-}
-
-.dropdown-arrow {
-  font-size: 12px;
-  margin-left: 5px;
-}
+/* Header styles moved to src/components/header/header.css */
 
 /* Page content area below header */
 .page-content-area {
   padding: 25px 40px;
   background-color: #f8f9fa; /* Match overall page background */
   flex-grow: 1;
+  overflow-y: auto; /* Allow scrolling for content area only */
 }
 
 .greeting-section h1 {
@@ -196,14 +135,12 @@ span[role="img"] {
 }
 
 /* Ensure global icon sizing for sidebar and header if not overridden */
-/* .home-sidebar .iconify, Moved to sidebar.css */
-.main-top-header .iconify,
-.main-top-header .FaBell, /* Targeting FaBell specifically */
-.main-top-header .FaUserCircle, /* Targeting FaUserCircle */
-.main-top-header .FaChevronDown { /* Targeting FaChevronDown */
-  font-size: 34px; /* Global icon size */
-  /* color: #BAC0C9; Default icon color for sidebar - moved */
-}
+/* .main-top-header .iconify, Moved to header.css */
+/* .main-top-header .FaBell, Moved to header.css */
+/* .main-top-header .FaUserCircle, Moved to header.css */
+/* .main-top-header .FaChevronDown { Moved to header.css */
+/* font-size: 34px; */
+/* } */
 
 /* .nav-link.active .iconify { Moved to sidebar.css
   color: white; 
