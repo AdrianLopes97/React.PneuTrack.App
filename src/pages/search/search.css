@@ -1,0 +1,146 @@
+/* src/pages/search/search.css */
+.search-layout {
+  display: flex;
+  background-color: #ffffff; /* Consistent background */
+  padding-left: 130px; /* Account for fixed sidebar */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+}
+
+.main-content-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.search-content {
+  padding: 20px 30px;
+  flex-grow: 1;
+}
+
+.page-title-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-instructions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-title-bar h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #505050;
+  margin: 0;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #505050; /* Icon color */
+}
+
+.back-button .iconify {
+  font-size: 28px; /* Adjust icon size */
+}
+
+.back-button:hover {
+  color: #265395; /* Darker on hover */
+}
+
+.search-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.search-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+}
+
+.search-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.search-card .card-icon {
+  font-size: 34px; /* Icon size */
+  color: #265395; /* Icon color - same as primary blue */
+  margin-right: 15px;
+}
+
+.search-card span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #505050;
+}
+
+/* Adjustments for consistency with home page action grid if needed */
+.search-card {
+  min-height: 80px; /* Ensure cards have a decent height */
+  background-color: #F5F5F5; /* Match background of home page cards */
+  border: none; /* Remove border if home page cards don't have it */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Softer shadow */
+}
+
+.search-card:hover {
+  background-color: #EEEEEE; /* Slightly darker on hover */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.search-card .card-icon {
+  color: #265395; /* Ensure icon color matches */
+}
+
+.search-card span {
+  color: #505050; /* Ensure text color matches */
+  font-weight: 500; /* Match font weight */
+}
+
+/* Ensure the grid always has 3 columns if that's the design from the screenshot */
+/* The screenshot shows 3 items, let's assume they should stay in one row if possible */
+.search-cards-container {
+    display: flex; /* Changed from grid to flex for simpler single row behavior */
+    flex-wrap: wrap; /* Allow wrapping if not enough space, though 3 should fit */
+    gap: 20px;
+}
+
+.search-card {
+    flex: 1 1 calc(33.333% - 20px); /* Distribute space, accounting for gap */
+    max-width: calc(33.333% - 20px); /* Max width for 3 items */
+    box-sizing: border-box;
+    /* min-width: 250px; /* Minimum width before wrapping or shrinking too much */
+}
+
+
+/* If strictly 3 columns are needed and they should not wrap, adjust: */
+@media (min-width: 900px) { /* Adjust breakpoint as needed */
+  .search-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Always 3 columns */
+    gap: 20px;
+  }
+  .search-card {
+    max-width: none; /* Reset max-width when in grid */
+  }
+}
+

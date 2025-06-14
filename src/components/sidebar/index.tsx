@@ -32,7 +32,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
         <NavLink to="/search" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}> {/* Placeholder path */} 
           <Icon icon="ph:magnifying-glass" />
         </NavLink>
-        <NavLink to="/trucks" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}> {/* Placeholder path */} 
+        <NavLink to="/fleet-overview" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}> {/* Placeholder path */} 
           <Icon icon="mage:delivery-truck" />
         </NavLink>
       </nav>

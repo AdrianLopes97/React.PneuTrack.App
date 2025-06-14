@@ -9,6 +9,8 @@ import TireRegistrationPage from './pages/registrations/tire'; // Added this lin
 import MaintenanceRegistrationPage from './pages/registrations/maintenance'
 import TruckRegistrationPage from './pages/registrations/truck'
 import RegisterTruckAxisTypePage from './pages/registrations/truck/register-axis-type'
+import SearchPage from './pages/search'
+import FleetOverviewPage from './pages/fleet-overview'
 
 function App() {
   return (
@@ -24,8 +26,8 @@ function App() {
         <Route path="/registrations/maintenance" element={<MaintenanceRegistrationPage />} />
         <Route path="/registrations/truck" element={<TruckRegistrationPage />} />
         <Route path="/registrations/truck/register-axis-type" element={<RegisterTruckAxisTypePage />} />
-        <Route path="/search" element={<div>Search Page Placeholder</div>} />
-        <Route path="/trucks" element={<div>Trucks Page Placeholder</div>} />
+        <Route path="/search" element={< SearchPage />} />
+        <Route path="/fleet-overview" element={< FleetOverviewPage />} />
         <Route element={<ProtectedRoute />}>
         </Route>
       </Routes>
