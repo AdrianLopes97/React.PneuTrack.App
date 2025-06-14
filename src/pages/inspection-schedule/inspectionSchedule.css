@@ -1,0 +1,97 @@
+/* Overall layout for the inspection schedule page */
+.inspection-schedule-layout {
+  display: flex;
+  background-color: #f8f9fa; /* Consistent background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 130px; /* Account for fixed sidebar */
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+}
+
+/* Area for header and main content, to the right of the sidebar */
+.main-content-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content specific to the inspection schedule */
+.inspection-content {
+  padding: 25px 40px;
+  background-color: #ffffff; /* White background for the content area */
+  flex-grow: 1;
+  /* overflow-y: auto; /* If needed for scrolling long lists */
+}
+
+.page-title-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.back-button .iconify {
+  font-size: 28px;
+  color: #505050;
+}
+
+.page-title-bar h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.inspection-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.inspection-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0; /* Vertical padding, no horizontal as it spans width */
+  border-bottom: 1px solid #e9ecef; /* Separator line */
+}
+
+.inspection-item:last-child {
+  border-bottom: none; /* No border for the last item */
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.placa-label {
+  font-size: 12px;
+  color: #6c757d; /* Grey color for label */
+  margin-bottom: 4px;
+}
+
+.placa-value {
+  font-size: 16px;
+  color: #343a40; /* Darker color for value */
+  font-weight: 500;
+}
+
+.item-checkbox .iconify {
+  font-size: 24px;
+}
+
+.checkbox-checked {
+  color: #28a745; /* Green for checked */
+}
+
+.checkbox-unchecked {
+  color: #ced4da; /* Light grey for unchecked */
+}
