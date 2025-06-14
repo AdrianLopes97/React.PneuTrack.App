@@ -1,7 +1,7 @@
 /* Overall layout for the inspection schedule page */
 .inspection-schedule-layout {
   display: flex;
-  background-color: #f8f9fa; /* Consistent background */
+  background-color: #ffffff; /* Consistent background */
   padding-left: 130px; /* Account for fixed sidebar */
   min-height: 100vh; /* Ensure it takes at least full viewport height */
 }

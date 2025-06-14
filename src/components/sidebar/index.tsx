@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
         <NavLink to="/inspection-schedule" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
           <Icon icon="icon-park-outline:inspection" />
         </NavLink>
-        <NavLink to="/list-add" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}> {/* Placeholder path */} 
+        <NavLink to="/registrations" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}> {/* Placeholder path */} 
           <Icon icon="icon-park-outline:list-add" />
         </NavLink>
         <NavLink to="/search" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}> {/* Placeholder path */} 

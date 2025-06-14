@@ -1,7 +1,7 @@
 /* Overall page layout */
 .home-page-layout {
   display: flex;
-  background-color: #f8f9fa; /* Light grey background for the whole page */
+  background-color: #ffffff; /* Light grey background for the whole page */
   padding-left: 130px; /* Add padding to account for fixed sidebar width */
 }
 
@@ -18,7 +18,7 @@
 /* Page content area below header */
 .page-content-area {
   padding: 25px 40px;
-  background-color: #f8f9fa; /* Match overall page background */
+  background-color: #ffffff; /* Match overall page background */
   flex-grow: 1;
   overflow-y: auto; /* Allow scrolling for content area only */
 }
