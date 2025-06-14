@@ -11,8 +11,8 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/2fa" element={<TwoFactorAuthPage />} />
+        <Route path="/home" element={<HomePage />} />
         <Route element={<ProtectedRoute />}>
-          <Route path="/home" element={<HomePage />} />
         </Route>
       </Routes>
     </Router>

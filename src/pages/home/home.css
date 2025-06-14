@@ -1,0 +1,212 @@
+/* Overall page layout */
+.home-page-layout {
+  display: flex;
+  /* height: 100vh; Removed as sidebar now controls its own height and is fixed */
+  background-color: #f8f9fa; /* Light grey background for the whole page */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Common Windows font */
+  padding-left: 130px; /* Add padding to account for fixed sidebar width */
+}
+
+/* Main content area */
+.home-main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+/* Top header in main content */
+.main-top-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px; /* Reduced vertical padding */
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #e0e0e0; /* Light border */
+  height: 60px; /* Fixed height for header */
+  box-sizing: border-box;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+}
+
+.notification-bell-container { /* Renamed for clarity */
+  position: relative;
+  margin-right: 25px;
+  font-size: 34px; /* Icon size updated */
+  color: #505050;
+  cursor: pointer;
+  display: flex; /* For centering icon if needed */
+  align-items: center;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0px;    /* Adjusted position */
+  right: -2px; /* Adjusted position */
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  border: 1.5px solid white; /* Slightly thicker border */
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #505050;
+}
+
+/* .user-profile span[role="img"] { User icon */
+  /* font-size: 24px; User icon size */
+  /* margin-right: 8px; */
+/* } */
+
+/* Updated rule for user profile SVG icon */
+.user-profile > svg {
+  width: 34px;
+  height: 34px;
+  margin-right: 8px;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Page content area below header */
+.page-content-area {
+  padding: 25px 40px;
+  background-color: #f8f9fa; /* Match overall page background */
+  flex-grow: 1;
+}
+
+.greeting-section h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #505050;
+  margin: 0 0 5px 0;
+}
+
+.greeting-section p {
+  font-size: 16px;
+  color: #505050;
+  margin-bottom: 30px;
+}
+
+.task-prompt-section h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #505050;
+  margin-bottom: 20px;
+}
+
+/* Primary action button */
+.primary-action-button {
+  background-color: #265395; /* Blue from screenshot */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 18px 25px;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+  display: flex; /* Use flexbox for icon and text-content alignment */
+  align-items: center; /* Vertically align icon and text block */
+}
+
+.primary-action-button:hover {
+  background-color: #1e3a70; /* Darker blue on hover */
+}
+
+/* Icon within the primary button */
+.primary-action-button .lupa-icon { /* More specific selector for the icon */
+  width: 34px; /* Adjust icon size as needed */
+  height: 34px;
+  margin-right: 15px; /* Space between icon and the text block */
+}
+
+.primary-action-button .lupa-icon svg {
+    fill: white;
+}
+
+/* Container for the two lines of text */
+.button-text-content {
+  display: flex;
+  flex-direction: column; /* Stack title and subtitle vertically */
+  align-items: flex-start;
+}
+
+.button-icon-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+.button-subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 4px; /* Space between title and subtitle */
+  opacity: 0.9;
+}
+
+/* Grid for secondary action cards */
+.secondary-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+  gap: 20px;
+}
+
+.action-card {
+  background-color: #F6F6F6;
+  border: 1px solid #e9ecef; /* Lighter border for cards */
+  border-radius: 8px;
+  padding: 25px 20px; /* More vertical padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  min-height: 50px; /* Ensure cards have some height */
+}
+
+.action-card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* Softer, slightly larger hover shadow */
+  transform: translateY(-2px); /* Subtle lift */
+}
+
+/* Updated rule for action card SVG icons */
+.action-card > svg {
+  width: 34px;
+  height: 34px;
+  color: #265395; /* Blue icons */
+  margin-bottom: 12px;
+}
+
+/* Ensure emoji render consistently */
+span[role="img"] {
+  display: inline-block; /* Helps with alignment and sizing */
+}
+
+/* Ensure global icon sizing for sidebar and header if not overridden */
+/* .home-sidebar .iconify, Moved to sidebar.css */
+.main-top-header .iconify,
+.main-top-header .FaBell, /* Targeting FaBell specifically */
+.main-top-header .FaUserCircle, /* Targeting FaUserCircle */
+.main-top-header .FaChevronDown { /* Targeting FaChevronDown */
+  font-size: 34px; /* Global icon size */
+  /* color: #BAC0C9; Default icon color for sidebar - moved */
+}
+
+/* .nav-link.active .iconify { Moved to sidebar.css
+  color: white; 
+} */
+
+/* Ensure LupaIcon in the button has specific styling if needed */

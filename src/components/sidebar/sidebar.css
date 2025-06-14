@@ -1,0 +1,90 @@
+/* Sidebar */
+.sidebar-layout { /* Renamed from .home-sidebar */
+  width: 130px; /* Narrow sidebar */
+  background-color: #F6F6F6; /* White sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05); /* Subtle shadow */
+  height: 100vh; /* Make sidebar take full viewport height */
+  position: fixed; /* Keep sidebar fixed on screen */
+  left: 0;
+  top: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 30px;
+  padding: 0 5px; 
+}
+
+.sidebar-logo-icon {
+  width: 123.95px; 
+  height: 34px; 
+  margin-right: 6px; 
+  object-fit: contain; 
+}
+
+.sidebar-title {
+  font-size: 11px; 
+  color: #505050;
+  font-weight: 600;
+  white-space: nowrap; 
+}
+
+.sidebar-navigation {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link {
+  color: #BAC0C9; 
+  padding: 12px; 
+  margin: 8px 0;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px; 
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link.active {
+  background-color: #265395; 
+  color: white;
+}
+
+.nav-link:not(.active):hover {
+  background-color: #e9ecef; 
+}
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.sidebar-copyright {
+  font-size: 10px;
+  color: #888;
+  margin-top: 15px;
+}
+
+/* Icon styling within sidebar */
+.sidebar-layout .iconify {
+  font-size: 34px; /* Global icon size for sidebar */
+  color: #BAC0C9; /* Default icon color for sidebar */
+}
+
+.nav-link.active .iconify {
+  color: white; /* Icon color for active nav link */
+}
