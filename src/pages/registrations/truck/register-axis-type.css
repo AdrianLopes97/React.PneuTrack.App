@@ -1,0 +1,179 @@
+/* src/pages/registrations/truck/register-axis-type.css */
+.register-axis-type-layout {
+  display: flex;
+  background-color: #ffffff;
+  padding-left: 130px; /* Account for fixed sidebar */
+  min-height: 100vh;
+}
+
+.main-content-area-axis-type {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.register-axis-type-content {
+  padding: 20px 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title-bar-axis-type {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.page-title-bar-axis-type h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #505050;
+  margin: 0;
+}
+
+.page-title-bar-axis-type h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #505050;
+  margin: 0;
+}
+
+.back-button-axis-type {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #505050;
+}
+
+.back-button-axis-type .iconify {
+  font-size: 28px;
+}
+
+.back-button-axis-type:hover {
+  color: #265395;
+}
+
+.axis-type-form-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; /* Center content horizontally if needed */
+}
+
+.axis-type-label {
+  font-size: 16px; /* Made it slightly larger as it acts like a section title */
+  font-weight: 600; /* Bolder */
+  color: #303030;
+  /* margin-bottom: 20px; /* Removed as margin is now on container */
+}
+
+.truck-axle-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-grow: 1; /* Allow image container to take space if needed */
+}
+
+.truck-axle-image {
+  max-width: 300px; /* Adjust as needed based on image size and design */
+  height: auto;
+  border-radius: 8px; /* Optional: if the image itself doesn't have rounded corners */
+  align-self: center; /* Center the image within its container if container is wider */
+}
+
+.form-row-axis-type {
+  display: flex;
+  gap: 20px; /* Space between form groups in a row */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group-axis-type {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow form groups to share space equally */
+}
+
+.form-group-axis-type label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #505050;
+  margin-bottom: 8px;
+}
+
+.form-group-axis-type input[type="text"] {
+  padding: 10px;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group-axis-type input[type="text"]::placeholder {
+  color: #a0a0a0;
+}
+
+.axis-type-label-container {
+    display: flex;
+    justify-content: flex-start; /* Align label to the left */
+    width: 100%;
+    margin-bottom: 10px; /* Space below the "Tipo de eixo" label */
+}
+
+.axis-type-label {
+  font-size: 16px; /* Made it slightly larger as it acts like a section title */
+  font-weight: 600; /* Bolder */
+  color: #303030;
+  /* margin-bottom: 20px; /* Removed as margin is now on container */
+}
+
+.axis-type-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-bottom: 20px; /* Ensure button is not at the very bottom */
+}
+
+.register-button-axis-type {
+  background-color: #4a6c9d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register-button-axis-type:hover {
+  background-color: #3a557d;
+}
+
+.save-button {
+  background-color: #265395;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 179px;
+  height: 49px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* Aligns button to the right */
+  margin-top: 30px;
+}

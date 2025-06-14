@@ -6,6 +6,9 @@ import ProtectedRoute from './components/ProtectedRoute' // Import ProtectedRout
 import InspectionSchedulePage from './pages/inspection-schedule'
 import RegistrationsPage from './pages/registrations'
 import TireRegistrationPage from './pages/registrations/tire'; // Added this line
+import MaintenanceRegistrationPage from './pages/registrations/maintenance'
+import TruckRegistrationPage from './pages/registrations/truck'
+import RegisterTruckAxisTypePage from './pages/registrations/truck/register-axis-type'
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/inspection-schedule" element={<InspectionSchedulePage />} />
         <Route path="/registrations" element={<RegistrationsPage />} />
-        <Route path="/registrations/tire" element={<TireRegistrationPage />} /> {/* Added this line */}
+        <Route path="/registrations/tire" element={<TireRegistrationPage />} />
+        <Route path="/registrations/maintenance" element={<MaintenanceRegistrationPage />} />
+        <Route path="/registrations/truck" element={<TruckRegistrationPage />} />
+        <Route path="/registrations/truck/register-axis-type" element={<RegisterTruckAxisTypePage />} />
         <Route path="/search" element={<div>Search Page Placeholder</div>} />
         <Route path="/trucks" element={<div>Trucks Page Placeholder</div>} />
         <Route element={<ProtectedRoute />}>

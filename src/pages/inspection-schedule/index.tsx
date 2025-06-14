@@ -3,7 +3,6 @@ import './inspectionSchedule.css';
 import Sidebar from '../../components/sidebar';
 import Header from '../../components/header';
 import { Icon } from '@iconify/react';
-import { useNavigate } from 'react-router-dom';
 
 const initialInspectionItems = [
   { placa: 'EAT-1010', checked: false },
@@ -20,12 +19,7 @@ const initialInspectionItems = [
 ];
 
 const InspectionSchedulePage: React.FC = () => {
-  const navigate = useNavigate();
   const [inspectionItems, setInspectionItems] = useState(initialInspectionItems);
-
-  const handleBackClick = () => {
-    navigate('/home');
-  };
 
   const handleCheckboxClick = (index: number) => {
     const newInspectionItems = [...inspectionItems];
@@ -40,9 +34,6 @@ const InspectionSchedulePage: React.FC = () => {
         <Header />
         <main className="inspection-content">
           <div className="page-title-bar">
-            <button className="back-button" onClick={handleBackClick}>
-              <Icon icon="material-symbols:arrow-back" />
-            </button>
             <h1>Cronograma de inspeções</h1>
           </div>
 

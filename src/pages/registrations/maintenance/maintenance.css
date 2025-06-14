@@ -1,4 +1,4 @@
-.tire-registration-layout {
+.maintenance-registration-layout {
   display: flex;
   background-color: #ffffff; /* Consistent background */
   padding-left: 130px; /* Account for fixed sidebar */
@@ -12,7 +12,7 @@
   overflow-y: auto;
 }
 
-.tire-registration-content {
+.maintenance-registration-content {
   padding: 20px 30px;
   flex-grow: 1;
 }
@@ -209,37 +209,37 @@
    Data, Custo are in a third.
 */
 
-.tire-registration-form .form-row:nth-child(1) .form-group { /* ID, Marca, Modelo */
+.maintenance-registration-form .form-row:nth-child(1) .form-group { /* ID, Marca, Modelo */
   flex-basis: calc(33.333% - 14px); /* Adjust for gap */
 }
 
-.tire-registration-form .form-row:nth-child(2) .form-group, /* Tamanho, Hodometro */
-.tire-registration-form .form-row:nth-child(3) .form-group { /* Data, Custo */
+.maintenance-registration-form .form-row:nth-child(2) .form-group, /* Tamanho, Hodometro */
+.maintenance-registration-form .form-row:nth-child(3) .form-group { /* Data, Custo */
   flex-basis: calc(50% - 10px); /* Adjust for gap */
 }
 
 /* If "ID do pneu" needs to be smaller than "Marca" and "Modelo" */
-.tire-registration-form .form-row:nth-child(1) .form-group:nth-child(1) { /* ID do pneu */
+.maintenance-registration-form .form-row:nth-child(1) .form-group:nth-child(1) { /* ID do pneu */
   flex-grow: 0.6; /* Example: make it smaller */
 }
-.tire-registration-form .form-row:nth-child(1) .form-group:nth-child(2), /* Marca */
-.tire-registration-form .form-row:nth-child(1) .form-group:nth-child(3) { /* Modelo */
+.maintenance-registration-form .form-row:nth-child(1) .form-group:nth-child(2), /* Marca */
+.maintenance-registration-form .form-row:nth-child(1) .form-group:nth-child(3) { /* Modelo */
   flex-grow: 1.2; /* Example: make them larger */
 }
 
 /* If "Tamanho" needs to be larger than "Hodometro" */
-.tire-registration-form .form-row:nth-child(2) .form-group:nth-child(1) { /* Tamanho */
+.maintenance-registration-form .form-row:nth-child(2) .form-group:nth-child(1) { /* Tamanho */
    flex-grow: 1.5;
 }
-.tire-registration-form .form-row:nth-child(2) .form-group:nth-child(2) { /* Hodometro */
+.maintenance-registration-form .form-row:nth-child(2) .form-group:nth-child(2) { /* Hodometro */
    flex-grow: 0.5;
 }
 
 /* If "Data" and "Custo" should be of specific relative sizes */
-.tire-registration-form .form-row:nth-child(3) .form-group:nth-child(1) { /* Data */
+.maintenance-registration-form .form-row:nth-child(3) .form-group:nth-child(1) { /* Data */
    flex-grow: 0.7;
 }
-.tire-registration-form .form-row:nth-child(3) .form-group:nth-child(2) { /* Custo */
+.maintenance-registration-form .form-row:nth-child(3) .form-group:nth-child(2) { /* Custo */
    flex-grow: 0.3; /* This makes Custo quite small, adjust as needed */
 }
 
@@ -250,22 +250,22 @@
 */
 
 /* Resetting flex-basis for more granular control with flex-grow */
-.tire-registration-form .form-row .form-group {
+.maintenance-registration-form .form-row .form-group {
   flex-basis: 0; /* Allow flex-grow to fully dictate size */
 }
 
 /* Row 1: ID, Marca, Modelo */
-.tire-registration-form .form-row:nth-of-type(1) .form-group:nth-child(1) { flex-grow: 1.5; } /* ID do pneu */
-.tire-registration-form .form-row:nth-of-type(1) .form-group:nth-child(2) { flex-grow: 2.5; } /* Marca */
-.tire-registration-form .form-row:nth-of-type(1) .form-group:nth-child(3) { flex-grow: 2.5; } /* Modelo */
+.maintenance-registration-form .form-row:nth-of-type(1) .form-group:nth-child(1) { flex-grow: 1.5; } /* ID do pneu */
+.maintenance-registration-form .form-row:nth-of-type(1) .form-group:nth-child(2) { flex-grow: 2.5; } /* Marca */
+.maintenance-registration-form .form-row:nth-of-type(1) .form-group:nth-child(3) { flex-grow: 2.5; } /* Modelo */
 
 /* Row 2: Tamanho, Hodometro */
-.tire-registration-form .form-row:nth-of-type(2) .form-group:nth-child(1) { flex-grow: 3; } /* Tamanho */
-.tire-registration-form .form-row:nth-of-type(2) .form-group:nth-child(2) { flex-grow: 2; } /* Hodometro */
+.maintenance-registration-form .form-row:nth-of-type(2) .form-group:nth-child(1) { flex-grow: 3; } /* Tamanho */
+.maintenance-registration-form .form-row:nth-of-type(2) .form-group:nth-child(2) { flex-grow: 2; } /* Hodometro */
 
 /* Row 3: Data, Custo */
-.tire-registration-form .form-row:nth-of-type(3) .form-group:nth-child(1) { flex-grow: 1; } /* Data */
-.tire-registration-form .form-row:nth-of-type(3) .form-group:nth-child(2) { flex-grow: 1; } /* Custo */
+.maintenance-registration-form .form-row:nth-of-type(3) .form-group:nth-child(1) { flex-grow: 1; } /* Data */
+.maintenance-registration-form .form-row:nth-of-type(3) .form-group:nth-child(2) { flex-grow: 1; } /* Custo */
 
 /* Ensure select dropdowns have a minimum width if they appear too crunched */
 .form-group select {

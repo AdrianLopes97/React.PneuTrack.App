@@ -8,11 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const RegistrationsPage: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleBackClick = () => {
-    navigate('/home'); // Or to the previous page if more appropriate
-  };
-
-  // Placeholder for navigation or action when a card is clicked
   const handleCardClick = (path: string) => {
     navigate(path);
   };
@@ -24,9 +19,6 @@ const RegistrationsPage: React.FC = () => {
         <Header />
         <main className="registrations-content">
           <div className="page-title-bar">
-            <button className="back-button" onClick={handleBackClick}>
-              <Icon icon="material-symbols:arrow-back" />
-            </button>
             <h1>Cadastros</h1>
           </div>
           <div className="registration-cards-container">
